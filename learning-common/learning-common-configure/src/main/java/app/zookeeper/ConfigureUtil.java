@@ -37,7 +37,7 @@ public class ConfigureUtil {
 
     public static  Map<String, Object> getConfigureData(String catatlog) {
         Map<String, Object> configData = ConfigureLoader.getConfigDataFromZooKeeper(catatlog);
-        if(configData!=null && configData.isEmpty()){
+        if(configData==null || configData.isEmpty()){
             configData = loadConfigData(catatlog);
         }
         return configData;
