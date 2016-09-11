@@ -128,10 +128,12 @@ public class DataSourceConfigure extends BasicDataSource{
 
 
     public static void changeDataSource(){
-       DataSourceConfigure dataSourceConfigure = (DataSourceConfigure) RuntimeContext.getBean("dataSource");
+       DataSourceConfigure dataSourceConfigure = (DataSourceConfigure) RuntimeContext.getBean(DataSourceConfigure.class);
         try {
-            dataSourceConfigure.close();
-            dataSourceConfigure.initDataSource();
+            if(dataSourceConfigure!=null) {
+                dataSourceConfigure.close();
+                dataSourceConfigure.initDataSource();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -139,7 +141,7 @@ public class DataSourceConfigure extends BasicDataSource{
 
 
 
-    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+    public Logger getParentLogger() {
         return null;
     }
 

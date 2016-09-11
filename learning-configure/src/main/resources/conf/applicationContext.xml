@@ -22,11 +22,17 @@
 	<!-- 注册ZooKeeper客户端，工厂方法根据配置创建，全工程尽量只使用这一个，需要时注入 -->
 	<bean id="zkClient" class="app.curator.ZooKeeperClientFactory" factory-method="createZooKeeperClient" />
 
-	<!--&lt;!&ndash; 注册ZooKeeper配置载入器，从ZooKeeper初始化配置 &ndash;&gt;-->
+	<!-- 注册ZooKeeper配置载入器，从ZooKeeper初始化配置 -->
 	<bean id="zkConfigLoader" class="app.zookeeper.ConfigureLoader" init-method="initConfgure" />
 
 
 	<bean class="app.jobs.StartUp"/>
+
+	<!-- 该项目暂时没用到数据库，但是zookeeper监听数据库修改，暂时放在这-->
+
+	<bean id="dataSource" class="app.datasource.DataSourceConfigure"
+		  destroy-method="close">
+	</bean>
 
 
 

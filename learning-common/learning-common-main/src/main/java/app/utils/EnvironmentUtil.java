@@ -34,7 +34,7 @@ public class EnvironmentUtil {
             if (isOnWindows()) {
                 path = "C:/"+  RUNTIME_CONFIG_ROOT_DIR_NAME;
             } else {
-                path = '/' + RUNTIME_CONFIG_ROOT_DIR_NAME;
+                path = "/data/" + RUNTIME_CONFIG_ROOT_DIR_NAME;
             }
         }
         return path;

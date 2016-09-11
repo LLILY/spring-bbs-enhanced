@@ -20,5 +20,14 @@ logs/
 
 *.iml
 
+logs/*
+log/*
+log
+log.*
+logs
+*.log
+
+application.conf
+
 
 
