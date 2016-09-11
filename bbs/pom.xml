@@ -7,9 +7,12 @@
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
+    <modules>
+        <module>bbs-usercenter</module>
+    </modules>
 
-  <groupId>com.app</groupId>
+    <groupId>com.app</groupId>
   <artifactId>bbs</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>bbs</name>
