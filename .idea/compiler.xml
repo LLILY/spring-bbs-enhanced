@@ -22,19 +22,31 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="bbs" />
+        <module name="learning-common-cache" />
+        <module name="learning-common-configure" />
         <module name="learning-common-jetty" />
+        <module name="learning-common-main" />
+        <module name="learning-common-swagger" />
+        <module name="learning-common-zookeeper" />
+        <module name="learning-configure" />
         <module name="learning-fms" />
-        <module name="learning-spring" />
-        <module name="learning-zookeeper" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="learning" target="1.5" />
+      <module name="bbs" target="1.5" />
       <module name="learning-common" target="1.5" />
+      <module name="learning-common-cache" target="1.5" />
+      <module name="learning-common-configure" target="1.5" />
       <module name="learning-common-jetty" target="1.5" />
-      <module name="learning-fms" target="1.5" />
+      <module name="learning-common-main" target="1.7" />
+      <module name="learning-common-swagger" target="1.5" />
+      <module name="learning-common-zookeeper" target="1.8" />
+      <module name="learning-configure" target="1.5" />
+      <module name="learning-fms" target="1.8" />
       <module name="learning-spring" target="1.5" />
-      <module name="learning-zookeeper" target="1.5" />
+      <module name="spring" target="1.5" />
+      <module name="spring-bbs-ehanced" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

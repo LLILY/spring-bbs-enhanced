@@ -3,17 +3,22 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>learning</artifactId>
+        <artifactId>spring-bbs-ehanced</artifactId>
         <groupId>com.app</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>learning-common</artifactId>
+    <name>learning-common</name>
     <packaging>pom</packaging>
     <modules>
         <module>learning-common-jetty</module>
-        <module>learning-zookeeper</module>
+        <module>learning-common-zookeeper</module>
+        <module>learning-common-main</module>
+        <module>learning-common-configure</module>
+        <module>learning-common-cache</module>
+        <module>learning-common-swagger</module>
     </modules>
 
 

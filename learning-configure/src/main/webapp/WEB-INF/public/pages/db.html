@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+
+<!-- Mirrored from www.zi-han.net/theme/hplus/form_wizard.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:28 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据库配置</title>
+    <link rel="shortcut icon" href="favicon.ico"> <link href="../css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="../css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="../css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="../css/plugins/steps/jquery.steps.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+           
+            
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox">
+                    <div class="ibox-title">
+                        <h5>数据库信息</h5>
+                    </div>
+                    <div class="ibox-content">
+                        <fieldset>
+                            <div class="row">
+                                <form id="form"  class="wizard-big" action="/saveConfigure">
+                                    <div class="col-sm-8">
+                                        <input id="" name="catatlog" value="db" type="hidden" class="form-control required">
+                                        <div class="form-group">
+                                            <label>数据库连接串URL</label>
+                                            <input id="connectUrl" name="db.url" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>数据库连接串URL</label>
+                                            <input id="driver" name="db.driver" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>数据库连接用户名</label>
+                                            <input id="userName" name="db.username" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>数据库连接密码</label>
+                                            <input id="password" name="db.password" type="password" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>连接池的最大数据库连接数。设为0表示无限制</label>
+                                            <input id="maxActive" name="db.maxActive" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>初始化连接</label>
+                                            <input id="initialSize" name="db.initialSize" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>最大建立连接等待时间。如果超过此时间将接到异常。设为-1表示无限制</label>
+                                            <input id="maxWait" name="db.maxWait" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>最大空闲数，数据库连接的最大空闲时间。超过空闲时间，数据库连接将被标记为不可用，然后被释放。设为0表示无限制。</label>
+                                            <input id="maxIdle" name="db.maxIdle" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>最小空闲数</label>
+                                            <input id="minIdle" name="db.minIdle" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>是否自动回收超时连接</label>
+                                            <input id="removeAbandoned" name="db.removeAbandoned" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>超时时间(以秒数为单位)</label>
+                                            <input id="removeAbandonedTimeout" name="db.removeAbandonedTimeout" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>在空闲连接回收器线程运行期间休眠的时间值,以毫秒为单位. </label>
+                                            <input id="timeBetweenEvictionRunsMillis" name="db.timeBetweenEvictionRunsMillis" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>连接在池中保持空闲而不被空闲连接回收器线程</label>
+                                            <input id="minEvictableIdleTimeMillis" name="db.minEvictableIdleTimeMillis" type="text" class="form-control required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>数据库连接密码</label>
+                                            <input id="connectionProperties" name="db.connectionProperties" type="text" class="form-control required">
+                                        </div>
+                                    </div>
+                                </form>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="text-center">
+                                        <div style="margin-top: 20px">
+                                            <i class="fa fa-sign-in" style="font-size: 180px;color: #e5e5e5 "></i>
+                                            <button class="btn btn-primary"  id="submitBtn">提交</button>
+                                            <button class="btn btn-primary"  id="cancelBtn">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>             
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js?v=2.1.4"></script>
+    <script src="../js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../js/db.js"></script>
+</body>
+</html>
