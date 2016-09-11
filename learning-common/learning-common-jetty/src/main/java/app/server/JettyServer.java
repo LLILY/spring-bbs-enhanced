@@ -104,7 +104,7 @@ public class JettyServer {
             long st = System.currentTimeMillis();
             server.start();
             long sp = System.currentTimeMillis() - st;
-            Logger.info("Listening for HTTP on port %s  ...，started %s seconds",new Object[] { Integer.valueOf(port),String.format("%.2f sec", sp / 1000D) });
+            Logger.warn("Listening for HTTP on port %s  ...，started %s seconds",new Object[] { Integer.valueOf(port),String.format("%.2f sec", sp / 1000D) });
             server.join();
         }catch (Exception e){
             e.printStackTrace();
