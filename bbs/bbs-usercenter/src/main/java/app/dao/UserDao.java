@@ -8,4 +8,5 @@ import app.models.User;
 public interface UserDao extends DAOBase{
 
     public User findById(Long userId);
+    public User findByUsernameAndPwd(String userName,String password);
 }

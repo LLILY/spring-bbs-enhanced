@@ -20,4 +20,7 @@ public class UserServiceImpl implements UserService {
     public User getUserById(long userId) {
         return this.userDao.findById(userId);
     }
+    public User getUserByUsernameAndPwd(String userName,String password){
+        return this.userDao.findByUsernameAndPwd(userName,password);
+    }
 }

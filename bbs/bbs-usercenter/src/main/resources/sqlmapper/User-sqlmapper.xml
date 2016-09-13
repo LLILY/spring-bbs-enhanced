@@ -10,5 +10,10 @@
 		where id = #{user_id}
 	</select>
 
+	<select id="findByUsernameAndPwd" resultType="User">
+		select id,user_name,password,age
+		from user
+		where user_name = #{user_name} and pwd=#{pwd}
+	</select>
 
 </mapper>

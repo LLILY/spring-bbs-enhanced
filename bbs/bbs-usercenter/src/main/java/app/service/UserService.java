@@ -8,4 +8,5 @@ import app.models.User;
 public interface UserService {
 
     public User getUserById(long userId);
+    public User getUserByUsernameAndPwd(String userName,String password);
 }

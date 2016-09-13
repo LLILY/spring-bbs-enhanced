@@ -3,10 +3,13 @@ package app.controller;
 import app.models.User;
 import app.service.UserService;
 import io.swagger.annotations.*;
+import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 /**
  * Created by lili19289 on 2016/8/4.
@@ -50,5 +53,22 @@ public class UserController {
     })
     @RequestMapping(value="/getUser",method=RequestMethod.GET)
     public void getUser(@RequestHeader("username") String username, @RequestParam("password") String password) {
+    }
+
+    @ApiOperation("用户登录")
+    @ApiResponses({
+            @ApiResponse(code=400,message="请求参数没填好"),
+            @ApiResponse(code=404,message="请求路径没有或页面跳转路径不对")
+    })
+    @RequestMapping(value="/login",method=RequestMethod.POST)
+    public String login(@RequestBody User user) {
+        User loginUser=userService.getUserByUsernameAndPwd(user.user_name,user.password);
+        if(loginUser!=null){
+            String usertoken= DigestUtils
+                    .md5Hex(loginUser.id + RandomStringUtils.random(6) + new Date().getTime());
+            return usertoken;
+        }else{
+            return "用户名密码错误！";
+        }
     }
 }
